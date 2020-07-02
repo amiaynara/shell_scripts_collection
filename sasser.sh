@@ -13,7 +13,9 @@ else
   touch BASE/_base-dir.sass LAYOUT/_layout-dir.sass MODULE/_module-dir.sass STATE/_state-dir.sass THEME/_theme-dir.sass app.sass # done for creating partials
   cd ..
   touch CSS/app.css
-  touch index.html
+  touch index.html                # the main index file here
+  touch _variables.sass           # all the variables go here[$example_var]
+  touch _mixins.sass              # only mixins go here
 
 #showing the structure created. 
   tree .
