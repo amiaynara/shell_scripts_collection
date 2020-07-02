@@ -8,7 +8,7 @@ then
 else  
 #create main project folder
   mkdir $1
-  mkdir -p $1/{.sass-cache,SASS/{BASE,LAYOUTS,MODULES,STATE,THEME},CSS}
+  mkdir -p $1/{.sass-cache,SASS/{BASE,LAYOUTS,MODULES,STATE,THEME},CSS,assets}
   cd $1/SASS
   touch BASE/_base-dir.sass LAYOUTS/_layout-dir.sass MODULES/_module-dir.sass STATE/_state-dir.sass THEME/_theme-dir.sass app.sass # done for creating partials
   
