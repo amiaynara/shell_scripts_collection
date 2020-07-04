@@ -19,12 +19,12 @@ else
   echo "@import \"MODULES/module-dir\"" >> app.sass
   echo "@import \"STATE/state-dir\"" >> app.sass
   echo "@import \"THEME/theme-dir\"" >> app.sass
-  cd ..
-  touch CSS/app.css
-  touch index.html                # the main index file here
   touch _variables.sass           # all the variables go here[$example_var]
   touch _mixins.sass              # only mixins go here
 
+  cd ..
+  touch CSS/app.css
+  touch index.html                # the main index file here
 #showing the structure created. 
   tree .
 
