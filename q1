@@ -1,0 +1,37 @@
+# Big Bang : Git initialized
+mkdir test_repo
+cd test_repo
+git init
+
+# initialzing content
+roll_number_member_1=11940140
+content="iitbhilai"
+# create a file for me
+touch $roll_number_member_1
+echo $content >> $roll_number_member_1
+
+
+
+# create 2 new files for the other two members of the group
+roll_number_member_2=11940141
+roll_number_member_3=11940142
+cp $roll_number_member_1  $roll_number_member_2 
+cp $roll_number_member_1  $roll_number_member_3
+
+# putting files into individual folders
+dir1="Kobe"
+dir2="LeBron"
+dir3="Jordan"
+mkdir $dir1 $dir2 $dir3
+mv $roll_number_member_1  ./$dir1
+mv $roll_number_member_2  ./$dir2
+mv $roll_number_member_3  ./$dir3
+
+# committing all the files at once, after staging ofcourse!
+#touch .gitignore
+# echo q1 >> .gitignore        # make sure the name is not changed; if so then that should be reflectected here as well. 
+git add .
+git commit -m "q1 complete"
+
+# show git-graph
+git graph

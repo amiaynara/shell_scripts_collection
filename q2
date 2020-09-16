@@ -1,0 +1,71 @@
+if [ $# == 0 ] 
+then 
+    echo "Name of Repository needed!!!"
+else
+
+    #Big Bang : Git initialized
+    mkdir ${1}          # mkdir test_repository   # switch these two  if you don't want to use the command line argument as repository name. 
+    cd ${1}             # cd test_repository
+    git init
+
+    git add .
+    git  commit -m "Big Bang Occurs"
+    git graph   
+    sleep 2
+
+    # initialzing content
+    roll_number_member_1=11940140
+    content="iitbhilai"
+    # create a file for me
+    touch $roll_number_member_1
+    echo $content >> $roll_number_member_1
+
+    git add $roll_number_member_1
+    git commit -m "files created"
+    git graph   
+    sleep 2
+
+    # create 2 new files for the other two members of the group
+    roll_number_member_2=11940141
+    roll_number_member_3=11940142
+    cp $roll_number_member_1  $roll_number_member_2 
+    cp $roll_number_member_1  $roll_number_member_3
+    git add $roll_number_member_1 $roll_number_member_2 $roll_number_member_3   # replace the file_names + directory names with '.' , in case you want
+                                                                                # to track .gitGraph as well. Do it at every 'git add'
+    git commit -m "files replicated"
+    git graph   
+    sleep 2
+
+
+
+
+    # putting files into individual folders
+    dir1="Kobe"
+    dir2="LeBron"
+    dir3="Jordan"
+    mkdir $dir1 $dir2 $dir3
+    git add $dir1 $dir2 $dir3
+    git commit -m "directories added commit"
+    git graph   
+    sleep 2
+
+
+
+
+
+    mv $roll_number_member_1  ./$dir1
+    mv $roll_number_member_2  ./$dir2
+    mv $roll_number_member_3  ./$dir3
+
+
+
+    #touch .gitignore              # remove the comment to avoid pushing local q2 to remote
+    # echo q2 >> .gitignore        # make sure the name is not changed; if so then that should be reflectected here as well. 
+    git add $roll_number_member_1 $roll_number_member_2 $roll_number_member_3 $dir1 $dir2 $dir3
+
+
+    git commit -m "final commit"
+    git graph   
+
+
+fi
