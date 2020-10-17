@@ -5,4 +5,12 @@ Statement       :
 Approach        : 
 Lesson Learnt   :
 '''
+t=int(intput())
+for _ in range(t):
+    N=int(input())
+    #A=[int(x) for x in input().split()]
+    B=[]
+    #for i in range(N):
+        #each_line=[int(y) for y in input().split()]
+        #B.append(each_line)
 
