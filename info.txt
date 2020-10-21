@@ -1,11 +1,11 @@
 '''
 Problem Name    :
-Solution Author : 
+Solution Author : Amiay Narayan
 Statement       : 
 Approach        : 
 Lesson Learnt   :
 '''
-t=int(intput())
+t=int(input())
 for _ in range(t):
     N=int(input())
     #A=[int(x) for x in input().split()]
